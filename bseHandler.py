@@ -14,9 +14,9 @@ def genFileName(): #not used
     return url_file_name, file_name , date_today
 
 def redisClient():
-    #return redis.Redis.from_url(os.environ.get("DB_con", 'None'),db=1,charset='utf-8', decode_responses=True)
+    return redis.Redis.from_url(os.environ.get("DB_con", 'None'),db=1,charset='utf-8', decode_responses=True)
     #return redis.Redis.from_url("127.0.0.1:6379",db=1,charset='utf-8', decode_responses=True)
-    return redis.StrictRedis(host='localhost',port=6379,db=0)
+    #return redis.StrictRedis(host='localhost',port=6379,db=0)
 
 def zipFromBSE():
     global ZIP_URL
