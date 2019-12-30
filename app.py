@@ -27,7 +27,10 @@ class OperationDetails(object):
     @cherrypy.tools.json_out()
     def GET(self):
         _fechDate = getOperationDetails()
-        return _fechDate[0] ,_fechDate[1]
+        if _fechDate:
+            return _fechDate[0] ,_fechDate[1]
+        else:
+            return None
 
 @cherrypy.expose
 class StockSearch(object):
