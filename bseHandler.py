@@ -51,13 +51,14 @@ def stockByName(name):
 def getOperationDetails():
     client = redisClient()
     _fetchDate = client.get('FetchDate')
-    datetime_object = datetime.strptime(_fetchDate.decode(), '%Y-%m-%d %H:%M:%S.%f')
-    date_object = str(datetime_object.date())
-    time_object = str(datetime_object.time())
-    time_object = time_object.split('.')
-    #_source = client.get('Source')
-    _source = None
-    return date_object, time_object[0],  _source
+    if _fetchDate:
+        datetime_object = datetime.strptime(_fetchDate.decode(), '%Y-%m-%d %H:%M:%S.%f')
+        date_object = str(datetime_object.date())
+        time_object = str(datetime_object.time())
+        time_object = time_object.split('.')
+        #_source = client.get('Source')
+        _source = None
+        return date_object, time_object[0],  _source
 
 def stockTopTen():
     data = []
