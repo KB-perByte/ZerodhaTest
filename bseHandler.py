@@ -1,4 +1,4 @@
-import os, zipfile, requests, io, csv, redis
+import zipfile, requests, io, csv, redis
 from datetime import date, datetime , timedelta
 from bs4 import BeautifulSoup
 
