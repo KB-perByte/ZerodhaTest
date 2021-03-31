@@ -6,7 +6,7 @@ cheroot==8.2.1
 CherryPy==18.5.0
 decorator==4.3.0
 idna==2.6
-lxml==4.4.2
+lxml==4.6.3
 pexpect==4.5.0
 pytz==2019.3
 redis==3.3.11
